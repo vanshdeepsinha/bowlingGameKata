@@ -1,0 +1,9 @@
+# Maven
+target/*
+pom.xml
+*.jar
+.classpath
+.project
+.settings/
+#Java class files
+*.class
