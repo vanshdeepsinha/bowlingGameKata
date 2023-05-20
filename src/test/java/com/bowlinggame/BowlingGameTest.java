@@ -11,5 +11,11 @@ public class BowlingGameTest {
 		BowlingGame bowlingGame = new BowlingGame();
 		assertNotNull(bowlingGame);
 	}
+	
+	@Test
+	public void canRollBall() {
+		BowlingGame bowlingGame = new BowlingGame();
+		bowlingGame.rollBall(0);
+	}
 
 }
