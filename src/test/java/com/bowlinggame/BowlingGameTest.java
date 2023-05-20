@@ -2,20 +2,26 @@ package com.bowlinggame;
 
 import static org.junit.Assert.assertNotNull;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class BowlingGameTest {
 	
+	private BowlingGame bowlingGame;
+	
+	@Before
+	public void setup() {
+		bowlingGame = new BowlingGame();
+	}
+	
 	@Test
 	public void startBowlingGame() {
-		BowlingGame bowlingGame = new BowlingGame();
 		assertNotNull(bowlingGame);
 	}
 	
 	@Test
 	public void canRollBall() {
-		BowlingGame bowlingGame = new BowlingGame();
 		bowlingGame.rollBall(0);
 	}
-
+	
 }
