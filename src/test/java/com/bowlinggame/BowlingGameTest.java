@@ -34,4 +34,13 @@ public class BowlingGameTest {
 		 assertEquals(0, bowlingGame.getScore());
 	 }
 	
+	@Test
+	public void canScoreGameofOnes() {
+		for(int i=0; i< 10; i++) {
+			 bowlingGame.rollBall(1);
+		 }
+		 
+		 assertEquals(10, bowlingGame.getScore());
+	}
+	
 }
