@@ -36,11 +36,25 @@ public class BowlingGameTest {
 	
 	@Test
 	public void canScoreGameofOnes() {
+		
+		/*The ball will be thrown 10 times to score 1*/
 		for(int i=0; i< 10; i++) {
 			 bowlingGame.rollBall(1);
 		 }
-		 
 		 assertEquals(10, bowlingGame.getScore());
+	}
+	
+	@Test
+	public void canScoreSpare() {
+		bowlingGame.rollBall(5);
+		bowlingGame.rollBall(5);
+		bowlingGame.rollBall(3);
+		
+		for (int i =0; i < 7; i++) {
+			bowlingGame.rollBall(0);
+		}
+		
+		assertEquals(16, bowlingGame.getScore());
 	}
 	
 }
