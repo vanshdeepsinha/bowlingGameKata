@@ -52,7 +52,7 @@ public class BowlingGameTest {
 		bowlingGame.rollBall(5);
 		bowlingGame.rollBall(3);
 		
-		for (int i =0; i < 7; i++) {
+		for (int i =0; i < 17; i++) {
 			bowlingGame.rollBall(0);
 		}
 		
