@@ -59,4 +59,20 @@ public class BowlingGameTest {
 		assertEquals(16, bowlingGame.getScore());
 	}
 	
+	@Test
+	public void canScoreStrikeByTwo3s() {
+		/*
+		  It will be 10 for strike and 3+3 are two extra 
+		  after that another 6
+		 */
+		bowlingGame.rollBall(10);
+		bowlingGame.rollBall(3);
+		bowlingGame.rollBall(3);
+		
+		for (int i=0; i<16; i++) {
+			 bowlingGame.rollBall(0);
+		   }
+		   assertEquals(22, bowlingGame.getScore());
+	}
+	
 }
