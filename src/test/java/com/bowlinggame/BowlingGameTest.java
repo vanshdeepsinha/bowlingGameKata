@@ -27,7 +27,7 @@ public class BowlingGameTest {
 	
 	@Test
 	public void shouldReturnZeroScore() {
-		 for(int i=0; i< 10; i++) {
+		 for(int i=0; i< 20; i++) {
 			 bowlingGame.rollBall(0);
 		 }
 		 
@@ -37,16 +37,18 @@ public class BowlingGameTest {
 	@Test
 	public void canScoreGameofOnes() {
 		
-		/*The ball will be thrown 10 times to score 1*/
-		for(int i=0; i< 10; i++) {
+		/*The ball will be thrown 20 times to score 1*/
+		for(int i=0; i< 20; i++) {
 			 bowlingGame.rollBall(1);
 		 }
-		 assertEquals(10, bowlingGame.getScore());
+		 assertEquals(20, bowlingGame.getScore());
 	}
 	
 	@Test
 	public void canScoreSpare() {
-		bowlingGame.rollBall(5);
+		bowlingGame.rollBall(5); /*
+								  It will be 5+5 for the spare and 3 as bonus and 3 extra so 16
+		                         */
 		bowlingGame.rollBall(5);
 		bowlingGame.rollBall(3);
 		
